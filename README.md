@@ -2,9 +2,15 @@
 
 ![Editor Screenshot](public/image.png)
 
-<video src="public/video.mp4" controls autoplay loop playsinline muted style="max-width: 100%; height: auto; border-radius: 8px;"></video>
+> **📺 Demo Video:** [Watch on GitHub](https://github.com/mageh21/video-editor-source-code/blob/main/public/video.mp4)
 
 Klippy is a fast, modern, and privacy‑friendly video editor that runs entirely in your browser. It uses Remotion for real‑time preview and FFmpeg.wasm for high‑quality local exports — no uploads, no accounts, no watermarks.
+
+## 🔗 Links
+
+- **Full Code Access:** [https://www.klippy.pro/](https://www.klippy.pro/)
+- **Discord Community:** [https://discord.gg/xJVXbQVPZP](https://discord.gg/xJVXbQVPZP)
+- **Buy Latest Codebase:** [https://www.klippy.pro/pricing](https://www.klippy.pro/pricing)
 
 Edit multi‑track timelines, add text, captions, chat overlays, transitions, and export up to 1080p directly from your machine.
 
