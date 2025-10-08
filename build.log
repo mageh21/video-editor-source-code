@@ -1,0 +1,24 @@
+
+> klippy@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.30
+
+   Creating an optimized production build ...
+(node:56224) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+Failed to compile.
+
+./app/components/editor/AssetsPanel/tools-section/MediaList.tsx:50:49
+Type error: Parameter 'f' implicitly has an 'any' type.
+
+[0m [90m 48 |[39m[0m
+[0m [90m 49 |[39m     [36mconst[39m onDeleteMedia [33m=[39m [36masync[39m (id[33m:[39m string) [33m=>[39m {[0m
+[0m[31m[1m>[22m[39m[90m 50 |[39m         [36mconst[39m onUpdateMedia [33m=[39m mediaFiles[33m.[39mfilter(f [33m=>[39m f[33m.[39mfileId [33m!==[39m id)[33m;[39m[0m
+[0m [90m    |[39m                                                 [31m[1m^[22m[39m[0m
+[0m [90m 51 |[39m         dispatch(setMediaFiles(onUpdateMedia))[33m;[39m[0m
+[0m [90m 52 |[39m         dispatch(setFilesID(filesID[33m?[39m[33m.[39mfilter(f [33m=>[39m f [33m!==[39m id) [33m||[39m []))[33m;[39m[0m
+[0m [90m 53 |[39m         [36mawait[39m deleteFile(id)[33m;[39m[0m
+Next.js build worker exited with code: 1 and signal: null

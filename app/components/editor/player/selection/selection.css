@@ -1,0 +1,35 @@
+/* Selection System Styles */
+
+/* Ensure selection outlines are crisp */
+.selection-outline {
+  image-rendering: crisp-edges;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth transitions for resize/drag */
+.selection-handle {
+  transition: transform 0.1s ease-out;
+}
+
+.selection-handle:hover {
+  transform: scale(1.2);
+}
+
+/* Rotate handle line */
+.rotate-handle-line {
+  background: #3B82F6;
+  transform-origin: bottom center;
+}
+
+/* Selected element glow effect */
+.selected-element {
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+}
+
+/* Prevent text selection during drag */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}

@@ -1,0 +1,31 @@
+/* Scene-specific styles */
+.player-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Infinite viewer styles */
+.infinite-viewer {
+  width: 100%;
+  height: 100%;
+}
+
+.infinite-viewer-viewport {
+  cursor: grab;
+}
+
+.infinite-viewer-viewport:active {
+  cursor: grabbing;
+}
+
+/* Hide scrollbars */
+.infinite-viewer-scrollbar {
+  display: none !important;
+}
+
+/* Board shadow effect */
+.board-shadow {
+  box-shadow: 0 0 0 5000px #121213;
+}

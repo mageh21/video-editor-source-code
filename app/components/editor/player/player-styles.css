@@ -1,0 +1,91 @@
+/* Custom styles for Remotion Player to match modern design */
+
+/* Override Remotion player control bar styling */
+.remotion-player {
+  border-radius: 12px !important;
+}
+
+.remotion-controls-container {
+  background: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 0 0 12px 12px !important;
+  padding: 12px !important;
+}
+
+/* Style the progress bar */
+.remotion-seek-bar {
+  height: 4px !important;
+  border-radius: 2px !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.remotion-seek-bar-progress {
+  background: #3b82f6 !important;
+  border-radius: 2px !important;
+}
+
+.remotion-seek-bar-buffer {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 2px !important;
+}
+
+/* Style control buttons */
+.remotion-control-button {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: white !important;
+  padding: 8px !important;
+  margin: 0 4px !important;
+  transition: all 0.2s ease !important;
+}
+
+.remotion-control-button:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: scale(1.05) !important;
+}
+
+/* Style the time display */
+.remotion-time-display {
+  color: white !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+/* Style volume controls */
+.remotion-volume-container {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  padding: 4px 8px !important;
+}
+
+.remotion-volume-slider {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 2px !important;
+}
+
+.remotion-volume-slider-progress {
+  background: #3b82f6 !important;
+  border-radius: 2px !important;
+}
+
+/* Hide poster frames */
+.remotion-poster {
+  display: none !important;
+}
+
+/* Style fullscreen button */
+.remotion-fullscreen-button {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: white !important;
+  padding: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.remotion-fullscreen-button:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: scale(1.05) !important;
+}

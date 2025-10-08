@@ -1,0 +1,50 @@
+'use client'
+import Link from "next/link";
+import ThemeSwitch from "../buttons/ThemeSwitch";
+import { usePathname } from "next/navigation";
+import { useNavigationLoader } from "@/app/hooks/useNavigationLoader";
+import FullScreenLoader from "../common/FullScreenLoader";
+
+export default function Header() {
+    const pathname = usePathname();
+    const { isNavigating, handleNavigation } = useNavigationLoader();
+
+    if (pathname.startsWith("/projects/")) {
+        return null;
+    }
+
+    return (
+        <header className="bg-black border-b border-gray-800 shadow-sm relative">
+            <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+                <div className="flex items-center">
+                    <Link href="/" className="text-3xl dark:text-gray-100">Klippy</Link>
+                </div>
+                <nav className="flex items-center">
+                    <ul className="flex space-x-2 mr-2">
+                        <li>
+                            <Link
+                                href="/"
+                                className="text-md text-white hover:text-gray-800 px-4 py-2 rounded-md hover:bg-gray-100 transition-colors"
+                            >
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/projects"
+                                onClick={(event) => {
+                                    handleNavigation(event, "/projects");
+                                }}
+                                className="text-md text-white hover:text-gray-800 px-4 py-2 rounded-md hover:bg-gray-100 transition-colors"
+                            >
+                                Projects
+                            </Link>
+                        </li>
+                    </ul>
+                    {/* <ThemeSwitch /> */}
+                </nav>
+            </div>
+            {isNavigating && <FullScreenLoader message="Opening projects" subtle />}
+        </header>
+    );
+}

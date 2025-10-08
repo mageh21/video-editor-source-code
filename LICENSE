@@ -1,0 +1,14 @@
+DUAL LICENSE
+
+This project is licensed under a dual license:
+
+1. Open Source License: GNU AGPL v3 (see LICENSE-AGPL3)
+   - Unless you have a separate commercial license from the copyright holder,
+     the AGPL v3 applies by default.
+   - Network use (SaaS) triggers the obligation to provide the corresponding
+     source to users interacting with the software over a network.
+
+2. Commercial License:
+   - For closed-source or commercial use without AGPL obligations, you must
+     obtain a commercial license from the copyright holder.
+   - For license inquiries, contact: jayakumarmagesh@gmail.com

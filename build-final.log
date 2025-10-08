@@ -1,0 +1,24 @@
+
+> klippy@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.30
+
+   Creating an optimized production build ...
+(node:67402) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+Failed to compile.
+
+./app/components/editor/captions/TikTokCaptionRenderer.tsx:433:84
+Type error: Property 'textShadow' does not exist on type 'CaptionStyle'.
+
+[0m [90m 431 |[39m                         color[33m:[39m isActive [33m?[39m [32m'#FF6B6B'[39m [33m:[39m style[33m.[39mcolor[33m,[39m[0m
+[0m [90m 432 |[39m                         fontWeight[33m:[39m isActive [33m?[39m [32m'bold'[39m [33m:[39m style[33m.[39mfontWeight[33m,[39m[0m
+[0m[31m[1m>[22m[39m[90m 433 |[39m                         textShadow[33m:[39m isActive [33m?[39m [32m'0 3px 5px rgba(0,0,0,0.3)'[39m [33m:[39m style[33m.[39mtextShadow [33m||[39m [32m'none'[39m[0m
+[0m [90m     |[39m                                                                                    [31m[1m^[22m[39m[0m
+[0m [90m 434 |[39m                     }[33m;[39m[0m
+[0m [90m 435 |[39m                     [0m
+[0m [90m 436 |[39m                     [36mreturn[39m ([0m
+Next.js build worker exited with code: 1 and signal: null

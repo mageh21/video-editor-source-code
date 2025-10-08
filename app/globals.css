@@ -1,0 +1,366 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import custom player styles */
+@import './components/editor/player/player-styles.css';
+
+/* Global theme overrides for black UI */
+:root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 7%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 13%;
+    --input: 0 0% 13%;
+    --ring: 0 0% 100%;
+    --radius: 0.5rem;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Homepage Animation Styles */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-delayed {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale-in {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes width-expand {
+    from {
+        width: 0;
+    }
+    to {
+        width: 8rem;
+    }
+}
+
+@keyframes track-expand {
+    from {
+        width: 0;
+    }
+    to {
+        width: inherit;
+    }
+}
+
+@keyframes track-expand-delayed {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 0;
+    }
+    100% {
+        width: inherit;
+    }
+}
+
+@keyframes pulse-slow {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delayed {
+    animation: fade-in-delayed 1.2s ease-out forwards;
+}
+
+.animate-scale-in {
+    animation: scale-in 0.6s ease-out forwards;
+}
+
+.animate-slide-down {
+    animation: slide-down 0.6s ease-out forwards;
+}
+
+.animate-slide-right {
+    animation: slide-right 0.6s ease-out forwards;
+}
+
+.animate-width-expand {
+    animation: width-expand 0.8s ease-out forwards;
+}
+
+.animate-track-expand {
+    animation: track-expand 0.8s ease-out forwards;
+}
+
+.animate-track-expand-delayed {
+    animation: track-expand-delayed 1.2s ease-out forwards;
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar for timeline specifically */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #4a4a4a;
+    border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+.custom-scrollbar::-webkit-scrollbar-corner {
+    background: #1a1a1a;
+}
+
+/* Hide scrollbar for timeline markers */
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Slider styling */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Checkerboard background for transparency */
+.bg-checkerboard {
+    background-image: 
+        linear-gradient(45deg, #374151 25%, transparent 25%), 
+        linear-gradient(-45deg, #374151 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #374151 75%), 
+        linear-gradient(-45deg, transparent 75%, #374151 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+input[type="range"]::-webkit-slider-track {
+    background: #333;
+    height: 2px;
+    border-radius: 1px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #fff;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-top: -5px;
+}
+
+.moveable-origin {
+    display: none !important;
+}
+.moveable-line.moveable-direction  {
+    display: none !important;
+}
+
+/* Performance optimizations for timeline elements */
+.timeline-element {
+    will-change: transform, width;
+    contain: layout style paint;
+    transform: translateZ(0); /* Force GPU acceleration */
+}
+
+.timeline-container {
+    will-change: scroll-position;
+    contain: strict;
+}
+
+.timeline-track {
+    contain: layout style paint;
+}
+
+/* Optimize draggable elements */
+.draggable-media {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Optimize preview player */
+.video-preview-container {
+    will-change: contents;
+    transform: translateZ(0);
+}
+
+/* Reduce repaints for frequently updated elements */
+.timeline-cursor {
+    will-change: transform;
+    transform: translateZ(0);
+    position: absolute;
+}
+
+/* Optimize text rendering */
+.timeline-text {
+    text-rendering: optimizeSpeed;
+    font-kerning: none;
+}
+
+/* Custom slider styles for range inputs */
+.slider {
+  appearance: none;
+  background: transparent;
+}
+
+.slider::-webkit-slider-track {
+  background: #4a5568;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  background: #3b82f6;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+.slider::-moz-range-track {
+  background: #4a5568;
+  height: 4px;
+  border-radius: 2px;
+  border: none;
+}
+
+.slider::-moz-range-thumb {
+  background: #3b82f6;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+/* Animation utilities */
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+}
+
+.slide-in-from-bottom-4 {
+  animation-name: slide-in-from-bottom;
+}
