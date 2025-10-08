@@ -2,7 +2,11 @@
 
 ![Editor Screenshot](public/image.png)
 
-> **📺 Demo Video:** [Watch on GitHub](https://github.com/mageh21/video-editor-source-code/blob/main/public/video.mp4)
+
+
+https://github.com/user-attachments/assets/6ae103df-bc3f-44a7-97d6-1c26e3571935
+
+
 
 Klippy is a fast, modern, and privacy‑friendly video editor that runs entirely in your browser. It uses Remotion for real‑time preview and FFmpeg.wasm for high‑quality local exports — no uploads, no accounts, no watermarks.
 
