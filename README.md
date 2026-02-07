@@ -12,7 +12,7 @@ Klippy is a fast, modern, and privacy‑friendly video editor that runs entirely
 
 ## 🔗 Links
 
-- **Full Code Access:** [https://www.klippy.pro/](https://www.klippy.pro/)
+
 - **Discord Community:** [https://discord.gg/xJVXbQVPZP](https://discord.gg/xJVXbQVPZP)
 
 
@@ -174,7 +174,7 @@ See inline TODOs across the codebase for more details.
 This project uses a dual license:
 
 - Open Source: GNU AGPL v3 (see `LICENSE-AGPL3`)
-- Commercial: For closed‑source or commercial use without AGPL obligations, contact the author for a commercial license: `jayakumarmagesh@gmail.com`
+
 
 Network/SaaS use triggers AGPL obligations to provide corresponding source to users interacting over a network. See `LICENSE` for details.
 
